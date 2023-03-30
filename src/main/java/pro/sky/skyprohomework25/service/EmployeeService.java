@@ -6,7 +6,6 @@ import pro.sky.skyprohomework25.exception.EmployeeNotFoundException;
 
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -19,7 +18,6 @@ public class EmployeeService {
             new Employee("Петр", "Петров")));
 
     public Employee addNewEmployee(String firstName, String lastName) {
-//        checkList();
         Employee employee = new Employee(firstName, lastName);
         isEmployeeAdded(employee);
         employees.add(employee);
@@ -63,15 +61,4 @@ public class EmployeeService {
         }
     }
 
-//    public void checkList() {
-//        int count = 0;
-//        for (int i = 0; i < employees.size(); i++) {
-//            if (employees.get(i).getFirstName() == null && employees.get(i).getLastName() == null) {
-//                count++;
-//            }
-//        }
-//        if (count == 0) {
-//            throw new EmployeeStorageIsFullException("ArrayIsFull");
-//        }
-//    }
 }
